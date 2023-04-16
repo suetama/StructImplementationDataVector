@@ -4,6 +4,7 @@
 #include <corecrt.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdbool.h>
 
 typedef struct vector {
     int *data; // указатель на элементы вектора
@@ -84,6 +85,59 @@ void deleteVector(vector *v) {
     v->capacity = 0;
 }
 
+bool isEmpty(vector *v) {
+    return v->size == 0;
+}
 
+bool isFull(vector *v) {
+    return v->size == v->capacity;
+}
+
+int getVectorValue(vector *v, size_t i) {
+    return v->data[i];
+}
+
+void pushBack(vector *v, int x) {
+    if (isFull(v)) {
+        reserve(v, v->capacity * 2);
+    }
+    v->data[v->size++] = x;
+}
+
+void test_pushBack_emptyVector() {
+    vector v = createVector(0);
+    pushBack(&v, 42);
+    assert(v.size == 1);
+    assert(v.data[0] == 42);
+    deleteVector(&v);
+}
+
+void test_pushBack_fullVector() {
+    vector v = createVector(1);
+    v.data[0] = 1;
+    pushBack(&v, 42);
+    assert(v.size == 2);
+    assert(v.capacity == 2);
+    assert(v.data[0] == 1);
+    assert(v.data[1] == 42);
+    deleteVector(&v);
+}
+
+void popBack(vector *v) {
+    if (v->size == 0) {
+        fprintf(stderr, "Error: Cannot pop from empty vector\n");
+        exit(1);
+    }
+    v->size--;
+}
+
+void test_popBack_notEmptyVector() {
+    vector v = createVector(0);
+    pushBack(&v, 10);
+    assert(v.size == 1);
+    popBack(&v);
+    assert(v.size == 0);
+    assert(v.capacity == 1);
+}
 
 #endif //VECTOR_VECTOR_H
