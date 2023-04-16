@@ -1,0 +1,93 @@
+[33mcommit a2d2e177edd529145c8a73a746cb726a302c5eb1[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: suetama <egor.kotolopenko@gmail.com>
+Date:   Sun Apr 16 20:36:32 2023 +0300
+
+    append access functions
+
+ .../vector/cmake-build-debug/.ninja_deps           | Bin [31m6852[m -> [32m8568[m bytes
+ .../vector/cmake-build-debug/.ninja_log            |  26 [32m+++++++++[m
+ .../CMakeFiles/untitled.dir/vector.c.obj           | Bin [31m12316[m -> [32m15425[m bytes
+ .../Testing/Temporary/LastTest.log                 |   4 [32m+[m[31m-[m
+ .../vector/cmake-build-debug/untitled.exe          | Bin [31m93422[m -> [32m94695[m bytes
+ libs/data_structures/vector/vector.c               |  18 [32m++++++[m
+ libs/data_structures/vector/vector.h               |  61 [32m+++++++++++++++++++++[m
+ 7 files changed, 107 insertions(+), 2 deletions(-)
+
+[33mcommit ca1b16eca349688ccb1bd1cc5a047688d73cb654[m
+Author: suetama <egor.kotolopenko@gmail.com>
+Date:   Sun Apr 16 19:42:29 2023 +0300
+
+    memory usage of vector
+
+ .../vector/cmake-build-debug/.ninja_deps           | Bin [31m5472[m -> [32m6852[m bytes
+ .../vector/cmake-build-debug/.ninja_log            |  16 [32m++++++[m
+ .../CMakeFiles/untitled.dir/vector.c.obj           | Bin [31m8186[m -> [32m12316[m bytes
+ .../Testing/Temporary/LastTest.log                 |   4 [32m+[m[31m-[m
+ .../vector/cmake-build-debug/untitled.exe          | Bin [31m88382[m -> [32m93422[m bytes
+ libs/data_structures/vector/vector.c               |   7 [32m+++[m
+ libs/data_structures/vector/vector.h               |  54 [32m+++++++++++++++++++++[m
+ 7 files changed, 79 insertions(+), 2 deletions(-)
+
+[33mcommit d55932abdabb81114abb4736b6857040f7039f66[m
+Author: suetama <egor.kotolopenko@gmail.com>
+Date:   Sun Apr 16 18:29:34 2023 +0300
+
+    memory usage of vector
+
+ libs/data_structures/vector/.idea/.name            |    1 [32m+[m
+ libs/data_structures/vector/CMakeLists.txt         |   10 [32m+[m
+ .../cmake-build-debug/.cmake/api/v1/query/cache-v2 |    0
+ .../.cmake/api/v1/query/cmakeFiles-v1              |    0
+ .../.cmake/api/v1/query/codemodel-v2               |    0
+ .../.cmake/api/v1/query/toolchains-v1              |    0
+ .../v1/reply/cache-v2-4a4b59d2b72dd7dc6b0b.json    | 1347 [32m++++++++++++++++++++[m
+ .../reply/cmakeFiles-v1-32c031fd79c6333cf365.json  |  116 [32m++[m
+ .../reply/codemodel-v2-0863618b26ed53d0410b.json   |   69 [32m+[m
+ .../directory-.-Debug-d0094a50bb2071803777.json    |   14 [32m+[m
+ .../v1/reply/index-2023-04-16T13-54-30-0505.json   |  108 [32m++[m
+ ...data_structures-Debug-7cadd6950af8f2269e34.json |  100 [32m++[m
+ ...target-untitled-Debug-c3af359baae2b648bbd8.json |  109 [32m++[m
+ .../reply/toolchains-v1-f26490843308616354d3.json  |   75 [32m++[m
+ .../vector/cmake-build-debug/.ninja_deps           |  Bin [31m0[m -> [32m5472[m bytes
+ .../vector/cmake-build-debug/.ninja_log            |   49 [32m+[m
+ .../vector/cmake-build-debug/CMakeCache.txt        |  419 [32m++++++[m
+ .../CMakeFiles/3.25.2/CMakeCCompiler.cmake         |   72 [32m++[m
+ .../CMakeFiles/3.25.2/CMakeCXXCompiler.cmake       |   83 [32m++[m
+ .../3.25.2/CMakeDetermineCompilerABI_C.bin         |  Bin [31m0[m -> [32m44875[m bytes
+ .../3.25.2/CMakeDetermineCompilerABI_CXX.bin       |  Bin [31m0[m -> [32m44894[m bytes
+ .../CMakeFiles/3.25.2/CMakeRCCompiler.cmake        |    6 [32m+[m
+ .../CMakeFiles/3.25.2/CMakeSystem.cmake            |   15 [32m+[m
+ .../3.25.2/CompilerIdC/CMakeCCompilerId.c          |  868 [32m+++++++++++++[m
+ .../CMakeFiles/3.25.2/CompilerIdC/a.exe            |  Bin [31m0[m -> [32m44950[m bytes
+ .../3.25.2/CompilerIdCXX/CMakeCXXCompilerId.cpp    |  857 [32m+++++++++++++[m
+ .../CMakeFiles/3.25.2/CompilerIdCXX/a.exe          |  Bin [31m0[m -> [32m44978[m bytes
+ .../cmake-build-debug/CMakeFiles/CMakeOutput.log   |  442 [32m+++++++[m
+ .../CMakeFiles/TargetDirectories.txt               |    4 [32m+[m
+ .../CMakeFiles/clion-Debug-log.txt                 |    4 [32m+[m
+ .../CMakeFiles/clion-environment.txt               |    4 [32m+[m
+ .../cmake-build-debug/CMakeFiles/cmake.check_cache |    1 [32m+[m
+ .../cmake-build-debug/CMakeFiles/rules.ninja       |   83 [32m++[m
+ .../CMakeFiles/untitled.dir/vector.c.obj           |  Bin [31m0[m -> [32m8186[m bytes
+ .../Testing/Temporary/LastTest.log                 |    3 [32m+[m
+ .../vector/cmake-build-debug/build.ninja           |  179 [32m+++[m
+ .../vector/cmake-build-debug/cmake_install.cmake   |   49 [32m+[m
+ .../vector/cmake-build-debug/untitled.exe          |  Bin [31m0[m -> [32m88382[m bytes
+ libs/data_structures/vector/vector.c               |   32 [32m+[m[31m-[m
+ libs/data_structures/vector/vector.h               |   89 [32m+[m[31m-[m
+ 40 files changed, 5201 insertions(+), 7 deletions(-)
+
+[33mcommit f388628f676c712c6fee4e17e285dc11734248c3[m
+Author: suetama <egor.kotolopenko@gmail.com>
+Date:   Sun Apr 16 17:11:35 2023 +0300
+
+    first commit
+
+ libs/data_structures/vector/.idea/.gitignore  | 8 [32m++++++++[m
+ libs/data_structures/vector/.idea/misc.xml    | 4 [32m++++[m
+ libs/data_structures/vector/.idea/modules.xml | 8 [32m++++++++[m
+ libs/data_structures/vector/.idea/vcs.xml     | 6 [32m++++++[m
+ libs/data_structures/vector/.idea/vector.iml  | 2 [32m++[m
+ libs/data_structures/vector/CMakeLists.txt    | 0
+ libs/data_structures/vector/vector.c          | 3 [32m+++[m
+ libs/data_structures/vector/vector.h          | 8 [32m++++++++[m
+ 8 files changed, 39 insertions(+)
