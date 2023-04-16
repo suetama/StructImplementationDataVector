@@ -1,0 +1,4 @@
+C:/Users/egork/CLionProjects/vector/libs/data_structures/vector/cmake-build-debug/CMakeFiles/untitled.dir
+C:/Users/egork/CLionProjects/vector/libs/data_structures/vector/cmake-build-debug/CMakeFiles/data_structures.dir
+C:/Users/egork/CLionProjects/vector/libs/data_structures/vector/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/egork/CLionProjects/vector/libs/data_structures/vector/cmake-build-debug/CMakeFiles/rebuild_cache.dir
