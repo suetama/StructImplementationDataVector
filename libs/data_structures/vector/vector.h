@@ -162,6 +162,7 @@ int* front(vector *v) {
         fprintf(stderr, "Error: Vector is empty\n");
         exit(1);
     }
+    
     return &(v->data[0]);
 }
 
