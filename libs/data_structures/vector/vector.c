@@ -7,6 +7,10 @@ void test(){
     test_pushBack_emptyVector();
     test_pushBack_fullVector();
     test_popBack_notEmptyVector();
+    test_atVector_notEmptyVector();
+    test_atVector_requestToLastElement();
+    test_back_oneElementInVector();
+    test_front_oneElementInVector();
 }
 
 int main() {
@@ -26,6 +30,20 @@ int main() {
     shrinkToFit(&v);
 
     printVector1(&v);
+
+    printf("%d\n", getVectorValue(&v, 3));
+
+    int *a = atVector(&v, 1);
+
+    printf("%d\n", *a);
+
+    int *back1 = back(&v);
+
+    printf("%d\n", *back1);
+
+    int *front1 = front(&v);
+
+    printf("%d\n", *front1);
 
     deleteVector(&v);
 

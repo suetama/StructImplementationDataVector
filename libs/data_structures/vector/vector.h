@@ -140,4 +140,65 @@ void test_popBack_notEmptyVector() {
     assert(v.capacity == 1);
 }
 
+int* atVector(vector *v, size_t index) {
+    if (index >= v->size) {
+        fprintf(stderr, "IndexError: a[%zu] is not exists\n", index);
+        exit(1);
+    }
+
+    return v->data + index;
+}
+
+int* back(vector *v) {
+    if (v->size == 0) {
+        fprintf(stderr, "Error: vector is empty\n");
+        exit(1);
+    }
+    return &(v->data[v->size - 1]);
+}
+
+int* front(vector *v) {
+    if (v->size == 0) {
+        fprintf(stderr, "Error: Vector is empty\n");
+        exit(1);
+    }
+    return &(v->data[0]);
+}
+
+void test_atVector_notEmptyVector() {
+    vector v = createVector(2);
+    pushBack(&v, 5);
+    pushBack(&v, 10);
+    int* ptr = atVector(&v, 0);
+    assert(*ptr == 5);
+    ptr = atVector(&v, 1);
+    assert(*ptr == 10);
+    clear(&v);
+}
+
+void test_atVector_requestToLastElement() {
+    vector v = createVector(2);
+    pushBack(&v, 5);
+    pushBack(&v, 10);
+    int* ptr = atVector(&v, 1);
+    assert(*ptr == 10);
+    clear(&v);
+}
+
+void test_back_oneElementInVector() {
+    vector v = createVector(2);
+    pushBack(&v, 5);
+    int* ptr = back(&v);
+    assert(*ptr == 5);
+    clear(&v);
+}
+
+void test_front_oneElementInVector() {
+    vector v = createVector(2);
+    pushBack(&v, 5);
+    int* ptr = front(&v);
+    assert(*ptr == 5);
+    clear(&v);
+}
+
 #endif //VECTOR_VECTOR_H
